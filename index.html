@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Documentation - Ouro</title>
+    <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="favicon.ico" type="image/x-icon">
+   <link rel="icon" type="image/png" href="small.png">
+   <script src="script.js"></script>
+</head>
+<body onload="start()">
+    <header>
+        <img src="full.png">
+        <p>A comprehensive guide to the syntax of OuroLang.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#basic-elements">Basic Elements</a></li>
+            <li><a href="#data-types">Data Types</a></li>
+            <li><a href="#variables-constants">Variables & Constants</a></li>
+            <li><a href="#operators">Operators</a></li>
+            <li><a href="#control-flow">Control Flow</a></li>
+            <li><a href="#functions">Functions</a></li>
+            <li><a href="#comments">Comments</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#grammar-rules">Full Grammar Rules (Optional)</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Welcome to the syntax documentation for Ouro! This document aims to provide a clear and concise overview of the language's grammar and structure. By understanding these rules, you will be able to write valid and functional programs in Ouro.</p>
+            <p>We aim to provide low-level performance with high-level syntax, streamlining the use of ML/AI to make revolutionary graphics.</p>
+        </section>
+
+        <section id="basic-elements">
+            <h2>Basic Elements</h2>
+            <h3>Keywords</h3>
+            <p>Keywords are reserved words that have special meaning in Ouro and cannot be used as identifiers (variable names, function names, etc.).</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>if</code></td>
+                        <td>Used for conditional execution.</td>
+                    </tr>
+                    <tr>
+                        <td><code>else</code></td>
+                        <td>Used with <code>if</code> for alternative execution.</td>
+                    </tr>
+                    <tr>
+                        <td><code>while</code></td>
+                        <td>Creates a loop that executes as long as a condition is true.</td>
+                    </tr>
+                    <tr>
+                        <td><code>void</code></td>
+                        <td>Declares a new function.</td>
+                    </tr>
+                    <tr>
+                        <td><code>public</code></td>
+                        <td>Declares a new function.</td>
+                    </tr>
+                    <tr>
+                        <td><code>private</code></td>
+                        <td>Declares a new function.</td>
+                    </tr>
+                    <tr>
+                        <td><code>protected</code></td>
+                        <td>Declares a new function.</td>
+                    </tr>
+                    <tr>
+                        <td><code>class</code></td>
+                        <td>Declares a new function.</td>
+                    </tr>
+                    <tr>
+                        <td><code>enum</code></td>
+                        <td>Declares a new function.</td>
+                    </tr>
+                    <tr>
+                        <td><code>struct</code></td>
+                        <td>Declares a new function.</td>
+                    </tr>
+                    <tr>
+                        <td><code>function</code></td>
+                        <td>Declares a new function.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Identifiers</h3>
+            <p>Identifiers are names used to identify variables, functions, types, etc. In Ouro, identifiers must:</p>
+            <ul>
+                <li>Start with a letter (a-z, A-Z) or an underscore (_).</li>
+                <li>Be followed by letters, numbers (0-9), or underscores.</li>
+                <li>Be case-sensitive/case-insensitive (specify which).</li>
+                <li>Not be a reserved keyword.</li>
+            </ul>
+            <div class="syntax-block">
+                <pre><code>// Example of valid identifiers
+myVariable
+_another_one
+calculateSum123
+
+// Example of invalid identifiers
+123start (starts with a number)
+my-variable (contains a hyphen)
+if (is a keyword)</code></pre>
+            </div>
+
+            <h3>Literals</h3>
+            <p>Literals are fixed values in the source code.</p>
+            <h4>Integer Literals</h4>
+            <p>Decimal integers, e.g., <code>123</code>, <code>-45</code>.</p>
+            <div class="syntax-block">
+                <pre><code>123
+-45
+0</code></pre>
+            </div>
+            <h4>String Literals</h4>
+            <p>Text enclosed in double quotes (<code>"</code>) or single quotes (<code>'</code>).</p>
+            <div class="syntax-block">
+                <pre><code>"Hello, World!"
+'Single quoted string'
+"Escaped quote: \"example\""</code></pre>
+            </div>
+            <h4>Boolean Literals</h4>
+            <p><code>true</code> and <code>false</code>.</p>
+            <div class="syntax-block">
+                <pre><code>true
+false</code></pre>
+            </div>
+            </section>
+
+        <section id="data-types">
+            <h2>Data Types</h2>
+            <p>Describe the built-in data types supported by your language.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Example Literals</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>Integer</code></td>
+                        <td>Whole numbers.</td>
+                        <td><code>10, -500, 0</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>String</code></td>
+                        <td>Sequence of characters.</td>
+                        <td><code>"hello", 'world'</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Boolean</code></td>
+                        <td>Truth values.</td>
+                        <td><code>true, false</code></td>
+                    </tr>
+                    </tbody>
+            </table>
+            <h3>Type Declaration (if applicable)</h3>
+            <p>If your language has explicit type declaration, describe its syntax here.</p>
+            <div class="syntax-block">
+                <pre><code>// Example:
+let myAge: Integer = 30;
+var greeting: String = "Hello";</code></pre>
+            </div>
+        </section>
+
+        <section id="variables-constants">
+            <h2>Variables and Constants</h2>
+            <h3>Variable Declaration</h3>
+            <p>How to declare variables.</p>
+            <div class="syntax-block">
+                <pre><code>// Syntax: [keyword] [identifier] [optional_type_annotation] [optional_assignment]
+let myVariable;               // Declare without initial value
+var anotherVar = 10;          // Declare with initial value
+const PI = 3.14159;           // Declare a constant</code></pre>
+            </div>
+            <p>Explain the difference between <code>let</code>, <code>var</code>, <code>const</code> or equivalent keywords in your language, if any (e.g., scope, mutability).</p>
+
+            <h3>Assignment</h3>
+            <p>How to assign values to variables.</p>
+            <div class="syntax-block">
+                <pre><code>myVariable = "new value";
+anotherVar = anotherVar + 5;</code></pre>
+            </div>
+        </section>
+
+        <section id="operators">
+            <h2>Operators</h2>
+            <p>Operators perform operations on one or more operands.</p>
+
+            <h3>Arithmetic Operators</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>+</code></td>
+                        <td>Addition</td>
+                        <td><code>a + b</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>-</code></td>
+                        <td>Subtraction</td>
+                        <td><code>a - b</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>*</code></td>
+                        <td>Multiplication</td>
+                        <td><code>a * b</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>/</code></td>
+                        <td>Division</td>
+                        <td><code>a / b</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>%</code></td>
+                        <td>Modulus (remainder)</td>
+                        <td><code>a % b</code></td>
+                    </tr>
+                    </tbody>
+            </table>
+
+            <h3>Comparison Operators</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>==</code></td>
+                        <td>Equality</td>
+                        <td><code>a == b</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>!=</code></td>
+                        <td>Inequality</td>
+                        <td><code>a != b</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;</code></td>
+                        <td>Less than</td>
+                        <td><code>a &lt; b</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&gt;</code></td>
+                        <td>Greater than</td>
+                        <td><code>a &gt; b</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;=</code></td>
+                        <td>Less than or equal to</td>
+                        <td><code>a &lt;= b</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&gt;=</code></td>
+                        <td>Greater than or equal to</td>
+                        <td><code>a &gt;= b</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Logical Operators</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>and</code> (or <code>&&</code>)</td>
+                        <td>Logical AND</td>
+                        <td><code>a and b</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>or</code> (or <code>||</code>)</td>
+                        <td>Logical OR</td>
+                        <td><code>a or b</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>not</code> (or <code>!</code>)</td>
+                        <td>Logical NOT</td>
+                        <td><code>not a</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            </section>
+
+        <section id="control-flow">
+            <h2>Control Flow</h2>
+            <p>Control flow statements dictate the order in which statements are executed.</p>
+
+            <h3>Conditional Statements (If-Else)</h3>
+            <div class="syntax-block">
+                <pre><code>// Basic If
+if (condition) {
+    // code to execute if condition is true
+}
+
+// If-Else
+if (condition) {
+    // code if true
+} else {
+    // code if false
+}
+
+// If-Else If-Else
+if (condition1) {
+    // code if condition1 is true
+} else if (condition2) {
+    // code if condition2 is true
+} else {
+    // code if no conditions are true
+}</code></pre>
+            </div>
+
+            <h3>Looping Statements (While, For)</h3>
+            <h4>While Loop</h4>
+            <div class="syntax-block">
+                <pre><code>while (condition) {
+    // code to repeat as long as condition is true
+}</code></pre>
+            </div>
+            <h4>For Loop (if applicable)</h4>
+            <p>Describe different types of for loops (e.g., C-style, for-each).</p>
+            <div class="syntax-block">
+                <pre><code>// C-style For Loop
+for (initialization; condition; increment) {
+    // code to repeat
+}
+
+// Example:
+for (let i = 0; i < 10; i++) {
+    print(i);
+}
+
+// For-each loop (if applicable)
+for element in collection {
+    // code for each element
+}</code></pre>
+            </div>
+            </section>
+
+        <section id="functions">
+            <h2>Functions</h2>
+            <p>Functions are blocks of code designed to perform a particular task.</p>
+            <h3>Function Declaration</h3>
+            <div class="syntax-block">
+                <pre><code>// Syntax: [keyword] [functionName]([parameters]) [optional_return_type] {
+//     // function body
+//     return value; // if applicable
+// }
+
+function greet(name: String): String {
+    return "Hello, " + name + "!";
+}
+
+function calculateSum(a: Integer, b: Integer) {
+    print(a + b);
+}</code></pre>
+            </div>
+            <h3>Function Call</h3>
+            <div class="syntax-block">
+                <pre><code>let message = greet("Alice");
+calculateSum(5, 7);</code></pre>
+            </div>
+        </section>
+
+        <section id="comments">
+            <h2>Comments</h2>
+            <p>Comments are non-executable text within the code, used for explanation and documentation.</p>
+            <h3>Single-line Comments</h3>
+            <div class="syntax-block">
+                <pre><code>// This is a single-line comment.
+let x = 10; // Comment after a statement.</code></pre>
+            </div>
+            <h3>Multi-line Comments</h3>
+            <div class="syntax-block">
+                <pre><code>/*
+This is a multi-line comment.
+It can span across multiple lines.
+*/
+let y = 20;</code></pre>
+            </div>
+        </section>
+
+        <section id="examples">
+            <h2>Examples</h2>
+            <p>A few complete examples demonstrating various syntax features.</p>
+            <h3>Example 1: Basic Program</h3>
+            <div class="example-code">
+                <pre><code>// This is a simple program in Ouro
+
+function main() {
+    print("Hello from Ouro!");
+    let count = 0;
+    while (count < 3) {
+        print("Count: " + count);
+        count = count + 1;
+    }
+}
+
+main(); // Call the main function</code></pre>
+            </div>
+
+            <h3>Example 2: Function with Conditional Logic</h3>
+            <div class="example-code">
+                <pre><code>function checkNumber(num: Integer): String {
+    if (num > 0) {
+        return "Positive";
+    } else if (num < 0) {
+        return "Negative";
+    } else {
+        return "Zero";
+    }
+}
+
+print(checkNumber(10));  // Output: Positive
+print(checkNumber(-5));  // Output: Negative
+print(checkNumber(0));   // Output: Zero</code></pre>
+            </div>
+            </section>
+
+        <section id="grammar-rules">
+            <h2>Full Grammar Rules (Optional)</h2>
+            <p>If you have a formal grammar (e.g., EBNF, ANTLR), you can include it here. This is particularly useful for language implementers.</p>
+            <div class="syntax-block">
+                <pre><code>// Example EBNF-like grammar snippet
+Program ::= Statement*
+Statement ::= Declaration | Assignment | IfStatement | LoopStatement | FunctionCall | Comment
+Declaration ::= "let" Identifier [":" Type] ["=" Expression] ";"
+IfStatement ::= "if" "(" Expression ")" Block ["else" Block]
+Block ::= "{" Statement* "}"
+Expression ::= ...
+</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nyx Creations LLC. All rights reserved.</p>
+        <p>Last updated: June 1, 2025</p>
+    </footer>
+</body>
+</html>
