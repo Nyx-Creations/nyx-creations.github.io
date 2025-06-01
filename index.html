@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syntax Documentation - Ouro</title>
     <link rel="stylesheet" href="style.css">
-   <link rel="icon" href="favicon.ico" type="image/x-icon">
-   <link rel="icon" type="image/png" href="small.png">
-   <script src="script.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="small.png">
+    <script src="script.js"></script>
 </head>
+
 <body onload="start()">
     <header>
         <img src="full.png">
@@ -33,14 +35,18 @@
     <main>
         <section id="introduction">
             <h2>Introduction</h2>
-            <p>Welcome to the syntax documentation for Ouro! This document aims to provide a clear and concise overview of the language's grammar and structure. By understanding these rules, you will be able to write valid and functional programs in Ouro.</p>
-            <p>We aim to provide low-level performance with high-level syntax, streamlining the use of ML/AI to make revolutionary graphics.</p>
+            <p>Welcome to the syntax documentation for Ouro! This document aims to provide a clear and concise overview
+                of the language's grammar and structure. By understanding these rules, you will be able to write valid
+                and functional programs in Ouro.</p>
+            <p>We aim to provide low-level performance with high-level syntax, streamlining the use of ML/AI to make
+                revolutionary graphics.</p>
         </section>
 
         <section id="basic-elements">
             <h2>Basic Elements</h2>
             <h3>Keywords</h3>
-            <p>Keywords are reserved words that have special meaning in Ouro and cannot be used as identifiers (variable names, function names, etc.).</p>
+            <p>Keywords are reserved words that have special meaning in Ouro and cannot be used as identifiers (variable
+                names, function names, etc.).</p>
             <table>
                 <thead>
                     <tr>
@@ -50,48 +56,100 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><code>if</code></td>
-                        <td>Used for conditional execution.</td>
+                        <td>interface</td>
+                        <td>Defines a set of method signatures that types can agree to implement. Specifies a contract
+                            without enforcing implementation.</td>
                     </tr>
                     <tr>
-                        <td><code>else</code></td>
-                        <td>Used with <code>if</code> for alternative execution.</td>
+                        <td>enum</td>
+                        <td>Declares a type consisting of a fixed set of named values (enumerators), typically used for
+                            finite options.</td>
                     </tr>
                     <tr>
-                        <td><code>while</code></td>
-                        <td>Creates a loop that executes as long as a condition is true.</td>
+                        <td>struct</td>
+                        <td>Defines a composite data type with named fields. Typically value-based and often used for
+                            lightweight data containers.</td>
                     </tr>
                     <tr>
-                        <td><code>void</code></td>
-                        <td>Declares a new function.</td>
+                        <td>void</td>
+                        <td>Indicates that a function or method returns no value.</td>
                     </tr>
                     <tr>
-                        <td><code>public</code></td>
-                        <td>Declares a new function.</td>
+                        <td>var</td>
+                        <td>Declares a variable with inferred or flexible type, possibly allowing type inference at
+                            compile time.</td>
                     </tr>
                     <tr>
-                        <td><code>private</code></td>
-                        <td>Declares a new function.</td>
+                        <td>const</td>
+                        <td>Declares an immutable value that cannot be changed after it's defined.</td>
                     </tr>
                     <tr>
-                        <td><code>protected</code></td>
-                        <td>Declares a new function.</td>
+                        <td>static</td>
+                        <td>Marks a member as belonging to the type itself rather than any instance of the type.</td>
                     </tr>
                     <tr>
-                        <td><code>class</code></td>
-                        <td>Declares a new function.</td>
+                        <td>final</td>
+                        <td>Marks a value, method, or type as non-overridable, non-assignable, or non-extendable,
+                            depending on context.</td>
                     </tr>
                     <tr>
-                        <td><code>enum</code></td>
-                        <td>Declares a new function.</td>
+                        <td>new</td>
+                        <td>Used to create new instances of types or objects.</td>
                     </tr>
                     <tr>
-                        <td><code>struct</code></td>
-                        <td>Declares a new function.</td>
+                        <td>this</td>
+                        <td>Refers to the current instance within its own type definition.</td>
                     </tr>
                     <tr>
-                        <td><code>function</code></td>
-                        <td>Declares a new function.</td>
+                        <td>base</td>
+                        <td>Refers to the immediate parent type from which the current type inherits or extends.</td>
+                    </tr>
+                    <tr>
+                        <td>super</td>
+                        <td>Used to access members or constructors of a parent type, often during inheritance.</td>
+                    </tr>
+                    <tr>
+                        <td>public</td>
+                        <td>Specifies that a member is accessible from any other part of the code.</td>
+                    </tr>
+                    <tr>
+                        <td>private</td>
+                        <td>Restricts access to a member so it can only be used within its own type.</td>
+                    </tr>
+                    <tr>
+                        <td>protected</td>
+                        <td>Allows access to a member from its own type and derived types.</td>
+                    </tr>
+                    <tr>
+                        <td>true</td>
+                        <td>The boolean literal representing logical truth.</td>
+                    </tr>
+                    <tr>
+                        <td>false</td>
+                        <td>The boolean literal representing logical falsehood.</td>
+                    </tr>
+                    <tr>
+                        <td>null</td>
+                        <td>Represents the absence of a value or reference.</td>
+                    </tr>
+                    <tr>
+                        <td>try</td>
+                        <td>Begins a block of code that may throw an error or exception.</td>
+                    </tr>
+                    <tr>
+                        <td>catch</td>
+                        <td>Defines a block to handle specific types of exceptions thrown in a preceding
+                            <code>try</code> block.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>finally</td>
+                        <td>Defines a block of code that always runs after a <code>try</code> or <code>catch</code>,
+                            regardless of exceptions.</td>
+                    </tr>
+                    <tr>
+                        <td>assert</td>
+                        <td>Evaluates a condition at runtime, usually to catch logic errors during development.</td>
                     </tr>
                 </tbody>
             </table>
@@ -138,7 +196,7 @@ if (is a keyword)</code></pre>
                 <pre><code>true
 false</code></pre>
             </div>
-            </section>
+        </section>
 
         <section id="data-types">
             <h2>Data Types</h2>
@@ -153,21 +211,81 @@ false</code></pre>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><code>Integer</code></td>
-                        <td>Whole numbers.</td>
-                        <td><code>10, -500, 0</code></td>
+                        <td>byte</td>
+                        <td>Signed 8-bit integer type.</td>
+                        <td><code>byte b = -100</code></td>
                     </tr>
                     <tr>
-                        <td><code>String</code></td>
-                        <td>Sequence of characters.</td>
-                        <td><code>"hello", 'world'</code></td>
+                        <td>ubyte</td>
+                        <td>Unsigned 8-bit integer type.</td>
+                        <td><code>ubyte ub = 200</code></td>
                     </tr>
                     <tr>
-                        <td><code>Boolean</code></td>
-                        <td>Truth values.</td>
-                        <td><code>true, false</code></td>
+                        <td>short</td>
+                        <td>Signed 16-bit integer type.</td>
+                        <td><code>short s = -32000</code></td>
                     </tr>
-                    </tbody>
+                    <tr>
+                        <td>ushort</td>
+                        <td>Unsigned 16-bit integer type.</td>
+                        <td><code>ushort us = 65000</code></td>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>Signed 32-bit integer type (default integer).</td>
+                        <td><code>int x = 123456</code></td>
+                    </tr>
+                    <tr>
+                        <td>uint</td>
+                        <td>Unsigned 32-bit integer type.</td>
+                        <td><code>uint ux = 4000000000</code></td>
+                    </tr>
+                    <tr>
+                        <td>long</td>
+                        <td>Signed 64-bit integer type.</td>
+                        <td><code>long l = -9000000000000000000</code></td>
+                    </tr>
+                    <tr>
+                        <td>ulong</td>
+                        <td>Unsigned 64-bit integer type.</td>
+                        <td><code>ulong ul = 18000000000000000000</code></td>
+                    </tr>
+                    <tr>
+                        <td>float</td>
+                        <td>32-bit floating-point number type.</td>
+                        <td><code>float f = 3.14</code></td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>64-bit floating-point number type (typically used for higher precision).</td>
+                        <td><code>double d = 2.718281828</code></td>
+                    </tr>
+                    <tr>
+                        <td>decimal</td>
+                        <td>High-precision decimal number type, often used for financial or exact calculations.</td>
+                        <td><code>decimal price = 19.99</code></td>
+                    </tr>
+                    <tr>
+                        <td>string</td>
+                        <td>A sequence of characters representing text.</td>
+                        <td><code>string name = "OuroLang"</code></td>
+                    </tr>
+                    <tr>
+                        <td>bool</td>
+                        <td>Boolean type that holds either <code>true</code> or <code>false</code>.</td>
+                        <td><code>bool isReady = true</code></td>
+                    </tr>
+                    <tr>
+                        <td>object</td>
+                        <td>Base type from which all reference types inherit. Used for general-purpose references.</td>
+                        <td><code>object any = "hello"</code></td>
+                    </tr>
+                    <tr>
+                        <td>char</td>
+                        <td>Represents a single Unicode character.</td>
+                        <td><code>char letter = 'A'</code></td>
+                    </tr>
+                </tbody>
             </table>
             <h3>Type Declaration (if applicable)</h3>
             <p>If your language has explicit type declaration, describe its syntax here.</p>
@@ -188,7 +306,8 @@ let myVariable;               // Declare without initial value
 var anotherVar = 10;          // Declare with initial value
 const PI = 3.14159;           // Declare a constant</code></pre>
             </div>
-            <p>Explain the difference between <code>let</code>, <code>var</code>, <code>const</code> or equivalent keywords in your language, if any (e.g., scope, mutability).</p>
+            <p>Explain the difference between <code>let</code>, <code>var</code>, <code>const</code> or equivalent
+                keywords in your language, if any (e.g., scope, mutability).</p>
 
             <h3>Assignment</h3>
             <p>How to assign values to variables.</p>
@@ -199,118 +318,144 @@ anotherVar = anotherVar + 5;</code></pre>
         </section>
 
         <section id="operators">
-            <h2>Operators</h2>
-            <p>Operators perform operations on one or more operands.</p>
+    <h2>Operators</h2>
+    <p>Operators perform operations on one or more operands in OuroLang.</p>
 
-            <h3>Arithmetic Operators</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Operator</th>
-                        <th>Description</th>
-                        <th>Example</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><code>+</code></td>
-                        <td>Addition</td>
-                        <td><code>a + b</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>-</code></td>
-                        <td>Subtraction</td>
-                        <td><code>a - b</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>*</code></td>
-                        <td>Multiplication</td>
-                        <td><code>a * b</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>/</code></td>
-                        <td>Division</td>
-                        <td><code>a / b</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>%</code></td>
-                        <td>Modulus (remainder)</td>
-                        <td><code>a % b</code></td>
-                    </tr>
-                    </tbody>
-            </table>
+    <h3>Arithmetic Operators</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>+</code></td><td>Addition or unary plus.</td><td><code>x = 1 + 2</code></td></tr>
+            <tr><td><code>-</code></td><td>Subtraction or unary minus.</td><td><code>x = 5 - 3</code></td></tr>
+            <tr><td><code>*</code></td><td>Multiplication.</td><td><code>x = 2 * 4</code></td></tr>
+            <tr><td><code>/</code></td><td>Division.</td><td><code>x = 10 / 2</code></td></tr>
+            <tr><td><code>%</code></td><td>Modulo (remainder).</td><td><code>x = 7 % 3</code></td></tr>
+            <tr><td><code>++</code></td><td>Increment by 1.</td><td><code>i++</code></td></tr>
+            <tr><td><code>--</code></td><td>Decrement by 1.</td><td><code>i--</code></td></tr>
+        </tbody>
+    </table>
 
-            <h3>Comparison Operators</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Operator</th>
-                        <th>Description</th>
-                        <th>Example</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><code>==</code></td>
-                        <td>Equality</td>
-                        <td><code>a == b</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>!=</code></td>
-                        <td>Inequality</td>
-                        <td><code>a != b</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;</code></td>
-                        <td>Less than</td>
-                        <td><code>a &lt; b</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>&gt;</code></td>
-                        <td>Greater than</td>
-                        <td><code>a &gt; b</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;=</code></td>
-                        <td>Less than or equal to</td>
-                        <td><code>a &lt;= b</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>&gt;=</code></td>
-                        <td>Greater than or equal to</td>
-                        <td><code>a &gt;= b</code></td>
-                    </tr>
-                </tbody>
-            </table>
+    <h3>Assignment Operators</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>=</code></td><td>Assignment.</td><td><code>x = 42</code></td></tr>
+            <tr><td><code>+=</code></td><td>Add and assign.</td><td><code>x += 5</code></td></tr>
+            <tr><td><code>-=</code></td><td>Subtract and assign.</td><td><code>x -= 3</code></td></tr>
+            <tr><td><code>*=</code></td><td>Multiply and assign.</td><td><code>x *= 2</code></td></tr>
+            <tr><td><code>/=</code></td><td>Divide and assign.</td><td><code>x /= 4</code></td></tr>
+            <tr><td><code>%=</code></td><td>Modulo and assign.</td><td><code>x %= 2</code></td></tr>
+            <tr><td><code>&amp;=</code></td><td>Bitwise AND and assign.</td><td><code>x &amp;= mask</code></td></tr>
+            <tr><td><code>|=</code></td><td>Bitwise OR and assign.</td><td><code>x |= flag</code></td></tr>
+            <tr><td><code>^=</code></td><td>Bitwise XOR and assign.</td><td><code>x ^= toggle</code></td></tr>
+            <tr><td><code>&lt;&lt;=</code></td><td>Left shift and assign.</td><td><code>x &lt;&lt;= 1</code></td></tr>
+            <tr><td><code>&gt;&gt;=</code></td><td>Right shift and assign.</td><td><code>x &gt;&gt;= 1</code></td></tr>
+            <tr><td><code>&gt;&gt;&gt;=</code></td><td>Unsigned right shift and assign.</td><td><code>x &gt;&gt;&gt;= 1</code></td></tr>
+            <tr><td><code>?=</code></td><td>Null-coalescing assignment.</td><td><code>value ?= default</code></td></tr>
+        </tbody>
+    </table>
 
-            <h3>Logical Operators</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Operator</th>
-                        <th>Description</th>
-                        <th>Example</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><code>and</code> (or <code>&&</code>)</td>
-                        <td>Logical AND</td>
-                        <td><code>a and b</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>or</code> (or <code>||</code>)</td>
-                        <td>Logical OR</td>
-                        <td><code>a or b</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>not</code> (or <code>!</code>)</td>
-                        <td>Logical NOT</td>
-                        <td><code>not a</code></td>
-                    </tr>
-                </tbody>
-            </table>
-            </section>
+    <h3>Comparison Operators</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>==</code></td><td>Equality.</td><td><code>a == b</code></td></tr>
+            <tr><td><code>!=</code></td><td>Inequality.</td><td><code>a != b</code></td></tr>
+            <tr><td><code>&lt;</code></td><td>Less than.</td><td><code>a &lt; b</code></td></tr>
+            <tr><td><code>&gt;</code></td><td>Greater than.</td><td><code>a &gt; b</code></td></tr>
+            <tr><td><code>&lt;=</code></td><td>Less than or equal to.</td><td><code>a &lt;= b</code></td></tr>
+            <tr><td><code>&gt;=</code></td><td>Greater than or equal to.</td><td><code>a &gt;= b</code></td></tr>
+        </tbody>
+    </table>
+
+    <h3>Logical Operators</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>&&</code></td><td>Logical AND (short-circuit).</td><td><code>a && b</code></td></tr>
+            <tr><td><code>||</code></td><td>Logical OR (short-circuit).</td><td><code>a || b</code></td></tr>
+            <tr><td><code>!</code></td><td>Logical NOT.</td><td><code>!a</code></td></tr>
+        </tbody>
+    </table>
+
+    <h3>Bitwise Operators</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>~</code></td><td>Bitwise NOT.</td><td><code>x = ~a</code></td></tr>
+            <tr><td><code>&amp;</code></td><td>Bitwise AND.</td><td><code>x = a &amp; b</code></td></tr>
+            <tr><td><code>|</code></td><td>Bitwise OR.</td><td><code>x = a | b</code></td></tr>
+            <tr><td><code>^</code></td><td>Bitwise XOR.</td><td><code>x = a ^ b</code></td></tr>
+            <tr><td><code>&lt;&lt;</code></td><td>Left shift.</td><td><code>x = x &lt;&lt; 2</code></td></tr>
+            <tr><td><code>&gt;&gt;</code></td><td>Right shift (signed).</td><td><code>x = x &gt;&gt; 1</code></td></tr>
+            <tr><td><code>&gt;&gt;&gt;</code></td><td>Unsigned right shift.</td><td><code>x = x &gt;&gt;&gt; 1</code></td></tr>
+        </tbody>
+    </table>
+
+    <h3>Range & Null Operators</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>...</code></td><td>Inclusive range.</td><td><code>for i in 1...5</code></td></tr>
+            <tr><td><code>..&lt;</code></td><td>Exclusive range.</td><td><code>for i in 1..&lt;5</code></td></tr>
+            <tr><td><code>??</code></td><td>Null-coalescing.</td><td><code>x = a ?? b</code></td></tr>
+            <tr><td><code>?</code></td><td>Optional type indicator.</td><td><code>int? maybe</code></td></tr>
+        </tbody>
+    </table>
+
+    <h3>Other Operators</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>$</code></td><td>Used for interpolation or identifiers.</td><td><code>print($"Hello, {name}")</code></td></tr>
+            <tr><td><code>@</code></td><td>Used for annotations or decorators.</td><td><code>@Test</code></td></tr>
+            <tr><td><code>\</code></td><td>Escape character in strings.</td><td><code>"Line\nBreak"</code></td></tr>
+        </tbody>
+    </table>
+</section>
+
 
         <section id="control-flow">
             <h2>Control Flow</h2>
@@ -365,7 +510,7 @@ for element in collection {
     // code for each element
 }</code></pre>
             </div>
-            </section>
+        </section>
 
         <section id="functions">
             <h2>Functions</h2>
@@ -445,11 +590,12 @@ print(checkNumber(10));  // Output: Positive
 print(checkNumber(-5));  // Output: Negative
 print(checkNumber(0));   // Output: Zero</code></pre>
             </div>
-            </section>
+        </section>
 
         <section id="grammar-rules">
             <h2>Full Grammar Rules (Optional)</h2>
-            <p>If you have a formal grammar (e.g., EBNF, ANTLR), you can include it here. This is particularly useful for language implementers.</p>
+            <p>If you have a formal grammar (e.g., EBNF, ANTLR), you can include it here. This is particularly useful
+                for language implementers.</p>
             <div class="syntax-block">
                 <pre><code>// Example EBNF-like grammar snippet
 Program ::= Statement*
@@ -468,4 +614,5 @@ Expression ::= ...
         <p>Last updated: June 1, 2025</p>
     </footer>
 </body>
+
 </html>
